@@ -1,0 +1,71 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    padding-top: 80px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #343a40 !important;
+}
+
+.navbar-brand img {
+    width: 40px;
+    height: 40px;
+}
+
+.card {
+    margin-bottom: 20px;
+    width: 200px;
+    transition: transform 0.2s, border-color 0.3s;
+}
+
+.card img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.added-to-cart {
+    border: 3px solid #28a745 !important;
+}
+
+.btn-add {
+    background-color: #28a745;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.btn-add:hover {
+    background-color: #218838;
+}
+
+.btn-remove {
+    background-color: #dc3545;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.btn-remove:hover {
+    background-color: #c82333;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
