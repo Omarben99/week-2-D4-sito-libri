@@ -1,71 +1,71 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EpicBooks</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Online Book Marketplace</title>
+    <link href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="depositphotos_232696618-stock-illustration-book-icon-vector-solid-illustration.jpg" alt="Logo"> EpicBooks
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="cartDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fas fa-shopping-cart"></i>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end p-3" aria-labelledby="cartDropdown" id="cart">
-                            <li><span class="dropdown-item">Il carrello è vuoto</span></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fas fa-user"></i>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                            <li><a class="dropdown-item" href="#">Profilo</a></li>
-                            <li><a class="dropdown-item" href="#">Impostazioni</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Logout</a></li>
-                        </ul>
-                    </li>
-                </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#" id="homeLink">Book Market</a>
+            <div class="ms-auto d-flex align-items-center" id="cartNav">
+                <div class="cart-counter me-2">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span id="cartCount" class="badge bg-primary">0</span>
+                </div>
+                <button class="btn btn-outline-danger btn-sm" id="clearCart">Clear Cart</button>
             </div>
         </div>
     </nav>
-    <div class="container mt-4">
-        <h1 class="text-center">EpicBooks - Marketplace</h1>
-        <input type="text" id="search" class="form-control my-3" placeholder="Cerca un libro...">
-        <div id="books-container" class="row"></div>
-    </div>
-    <footer class="bg-dark text-light text-center py-4 mt-5">
-        <div class="container">
-            <p>EpicBooks S.r.l. - Via Zebby 123, 00100 Roma, Italia</p>
-            <p>Email: info@epicbooks.com | Telefono: +39 0123 456789</p>
-            <div>
-                <a href="#" class="text-light mx-2"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="text-light mx-2"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="text-light mx-2"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="text-light mx-2"><i class="fab fa-linkedin"></i></a>
+
+    <!-- Home Page Section -->
+    <div id="homePage" class="container mt-4">
+        <div class="row mb-4">
+            <div class="col-md-6 offset-md-3">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search books...">
             </div>
         </div>
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+
+        <div class="row">
+            <div class="col-md-8">
+                <div id="booksList" class="row g-4">
+                    <!-- Books will be dynamically loaded here -->
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        Shopping Cart
+                    </div>
+                    <div class="card-body">
+                        <div id="cartItems">
+                            <!-- Cart items will be displayed here -->
+                        </div>
+                        <div id="cartTotal" class="mt-3">
+                            Total: $0.00
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Details Page Section -->
+    <div id="detailsPage" class="container mt-4" style="display: none;">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div id="bookDetails" class="card">
+                    <!-- Book details will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
-</body>
-</html>
-
 </body>
 </html>

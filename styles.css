@@ -1,71 +1,48 @@
-/* styles.css */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    padding-top: 80px;
+.book-card {
+    height: 100%;
+    transition: all 0.3s ease;
 }
 
-.container {
-    max-width: 800px;
-    margin: auto;
+.book-card.in-cart {
+    border: 2px solid var(--bs-primary);
 }
 
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #343a40 !important;
+.cart-counter {
+    position: relative;
+    cursor: pointer;
 }
 
-.navbar-brand img {
-    width: 40px;
-    height: 40px;
+.cart-counter .badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
 }
 
-.card {
-    margin-bottom: 20px;
-    width: 200px;
-    transition: transform 0.2s, border-color 0.3s;
+#cartItems {
+    max-height: 400px;
+    overflow-y: auto;
 }
 
-.card img {
-    height: 250px;
-    object-fit: cover;
+.cart-item {
+    border-bottom: 1px solid var(--bs-border-color);
+    padding: 10px 0;
 }
 
-.card:hover {
-    transform: scale(1.05);
+.cart-item:last-child {
+    border-bottom: none;
 }
 
-.added-to-cart {
-    border: 3px solid #28a745 !important;
+.search-wrapper {
+    position: relative;
 }
 
-.btn-add {
-    background-color: #28a745;
-    color: white;
-    transition: background-color 0.3s;
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
 }
 
-.btn-add:hover {
-    background-color: #218838;
-}
-
-.btn-remove {
-    background-color: #dc3545;
-    color: white;
-    transition: background-color 0.3s;
-}
-
-.btn-remove:hover {
-    background-color: #c82333;
-}
-
-footer {
-    background-color: #343a40;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    margin-top: 40px;
+@media (max-width: 768px) {
+    .col-md-4 {
+        margin-top: 2rem;
+    }
 }
